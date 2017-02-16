@@ -28,28 +28,24 @@ class ViewController: UIViewController {
         
         //is touchID available and configured
         if authContext.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
-            //Perform Touch ID auth
-            authContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: "Testing Touch ID", reply:{(wasSuccessful:Bool, err:NSError?)
-                
-                if(wasSuccessful)
-                {
+            //perform touch Id
+            authContext.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Testing Touch Id", reply: {(success, error) in
+                if success {
                     //User authenticated
-                    self.updateAuthenticateResult(authError:error)
-                }
-                else
-                {
+                    self.updateAuthenticateResult(authError:error as NSError?)
+                } else {
                     //There are a few reasons why it can fail, we'll write them out to the user in the label
                     
-                    self.updateAuthenticateResult(authError: error)
+                    self.updateAuthenticateResult(authError: error as NSError?)
                     
-                    self.writeOutAuthResult(error)
+                    //self.writeOutAuthResult(error)
                 }
-                
-            })
+            } )
+            
         } else {
-            //not available or configured
+            //not configured or available
+            self.showAlert()
         }
-        
     }
 
     @IBOutlet weak var authenticateResultLabel: UILabel!
@@ -66,5 +62,15 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    func showAlert() {
+        let alertController = UIAlertController(title: "Hey There", message: "Touch Id is not configured or not supported", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
 }
 

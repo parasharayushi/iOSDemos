@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					0108C90B1E53B6970017DFE9 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 78N64K4DPL;
 						ProvisioningStyle = Automatic;
 					};
 					0108C91F1E53B6970017DFE9 = {
@@ -336,6 +337,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ayushi Parashar (8DMG9ETPBM)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -358,6 +360,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "179310b8-d12f-4dc6-9f4e-b083a52e80b7";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -401,6 +404,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "179310b8-d12f-4dc6-9f4e-b083a52e80b7";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -412,10 +416,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 78N64K4DPL;
 				INFOPLIST_FILE = TouchIdDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ayu.TouchIdDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "-8N64K4DPL.myProject.TouchId";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "179310b8-d12f-4dc6-9f4e-b083a52e80b7";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -424,10 +431,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 78N64K4DPL;
 				INFOPLIST_FILE = TouchIdDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ayu.TouchIdDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "-8N64K4DPL.myProject.TouchId";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "179310b8-d12f-4dc6-9f4e-b083a52e80b7";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -505,6 +514,7 @@
 				0108C9361E53B6970017DFE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0108C9371E53B6970017DFE9 /* Build configuration list for PBXNativeTarget "TouchIdDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +523,7 @@
 				0108C9391E53B6970017DFE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0108C93A1E53B6970017DFE9 /* Build configuration list for PBXNativeTarget "TouchIdDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +532,7 @@
 				0108C93C1E53B6970017DFE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
